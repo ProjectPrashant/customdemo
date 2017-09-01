@@ -1,0 +1,55 @@
+﻿<!doctype>
+<html>
+<head>
+    <script src="js/angular.js"></script>
+    <script src="js/customfiltercontroller.js"></script>
+    <script src="js/filter.js"></script>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body ng-app="myApplication" ng-controller="customfiltercontroller">
+
+    
+    <br><br>
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>City</th>
+         
+           
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="empdata in employees">
+                <td>{{empdata.name}}</td>
+                <td>{{empdata.gender}}</td>
+                <td>{{empdata.city}}</td>
+            
+            </tr>
+        
+        </tbody>
+    </table>
+    <br><br>
+    <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>City</th>
+         
+           
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="empdata in employees">
+                <td>{{empdata.name}}</td>
+                <td>{{empdata.gender|gender}}</td>
+                <td>{{empdata.city}}</td>
+            
+            </tr>
+        
+        </tbody>
+    </table>
+</body >
+</html>
